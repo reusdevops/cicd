@@ -1,0 +1,16 @@
+name: Testing Application
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing Message
+        run: \
+          echo "Hello World" \
+          echo ${{ inputs.name }}
