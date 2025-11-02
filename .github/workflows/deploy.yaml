@@ -69,7 +69,7 @@ jobs:
         working-directory: ./cicd/ansible
         run: |
           ansible-playbook playbook.yaml \
-            -e ansible_private_key_file=~/.ssh/dev-server.pem \
+            -e ansible_ssh_private_key_file=~/.ssh/dev-server.pem \
             -e ENVIRONMENT=dev \
             -e DOCKER_IMAGE_TAG=${{ github.sha }} \
             --vault-password-file ~/.vault_password
