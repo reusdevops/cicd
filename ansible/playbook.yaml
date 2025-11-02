@@ -9,7 +9,7 @@
   
   vars:
     # Default values (overridden by GitHub Actions -e flags)
-    DOCKER_IMAGE_NAME: "transcoding"
+    DOCKER_IMAGE_NAME: "movie"
     DOCKER_IMAGE_TAG: "latest"
     ENVIRONMENT: "dev"
     
@@ -148,9 +148,22 @@
           NODE_ENV: "{{ ENVIRONMENT }}"
           APP_VERSION: "{{ DOCKER_IMAGE_TAG }}"
           PORT: "{{ container_port }}"
-          EMAIL_USER: "{{ email_user }}"
-          EMAIL_PASSWORD: "{{ email_password}}"
-          RECEIVER_EMAIL: "{{ receiver_email }}"
+          # Database Configuration
+          DB_HOST: db_host
+          DB_PORT: db_port
+          DB_USERNAME: db_username
+          DB_PASSWORD: db_password
+          DB_DATABASE: db_database
+
+          # JWT Configuration
+          JWT_SECRET: jwt_secret
+          JWT_EXPIRATION: jwt_expiration
+
+          #CloudFlare R2 configuration
+          R2_ACCESS_KEY: r2_access_key
+          R2_SECRET_KEY: r2_secret_key
+          CLOUDFLARE_ENDPOINT: cloudflare_endpoint
+
         labels:
           app: "{{ DOCKER_IMAGE_NAME }}"
           environment: "{{ ENVIRONMENT }}"

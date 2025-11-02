@@ -1,3 +1,12 @@
 
-host_port: "4000"
-container_port: "4000"
+app_port: "3000"
+container_port: "3000"
+
+db_host: dev-movie-db.c5m0mwka0msk.ap-southeast-1.rds.amazonaws.com
+db_port: 3306
+db_username: admin
+db_database: dev_movie_db
+jwt_expiration: 1d
+
+cloudflare_endpoint: https://cc1f0883b28c2eba06bf5eaf5dafc273.r2.cloudflarestorage.com
+r2_bucket_name: video-streaming
