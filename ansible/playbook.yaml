@@ -149,20 +149,20 @@
           APP_VERSION: "{{ DOCKER_IMAGE_TAG }}"
           PORT: "{{ container_port }}"
           # Database Configuration
-          DB_HOST: db_host
-          DB_PORT: db_port
-          DB_USERNAME: db_username
-          DB_PASSWORD: db_password
-          DB_DATABASE: db_database
+          DB_HOST: "{{ db_host }}"
+          DB_PORT: "{{ db_port }}"
+          DB_USERNAME: "{{ db_username }}"
+          DB_PASSWORD: "{{ db_password }}"
+          DB_DATABASE: "{{ db_database }}"
 
           # JWT Configuration
-          JWT_SECRET: jwt_secret
-          JWT_EXPIRATION: jwt_expiration
+          JWT_SECRET: "{{ jwt_secret }}"
+          JWT_EXPIRATION: "{{ jwt_expiration }}"
 
           #CloudFlare R2 configuration
-          R2_ACCESS_KEY: r2_access_key
-          R2_SECRET_KEY: r2_secret_key
-          CLOUDFLARE_ENDPOINT: cloudflare_endpoint
+          R2_ACCESS_KEY: "{{ r2_access_key}}"
+          R2_SECRET_KEY: "{{ r2_secret_key }}"
+          CLOUDFLARE_ENDPOINT: "{{ cloudflare_endpoint }}"
 
         labels:
           app: "{{ DOCKER_IMAGE_NAME }}"
