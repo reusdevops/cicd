@@ -4,7 +4,7 @@ regions:
 
 filters:
   instance-state-name: running
-  tag:name: dev-movie
+  tag:name: movie
   tag:environment: development
-  tag:application: movie
+  tag:application: backend
     
