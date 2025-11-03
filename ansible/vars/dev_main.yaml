@@ -1,6 +1,6 @@
 
-host_port: 3000
-container_port: 3000
+host_port: "3000"
+container_port: "3000"
 
 db_host: dev-movie-db.c5m0mwka0msk.ap-southeast-1.rds.amazonaws.com
 db_port: 3306
