@@ -3,7 +3,7 @@ host_port: "3000"
 container_port: "3000"
 
 db_host: dev-movie-db.c5m0mwka0msk.ap-southeast-1.rds.amazonaws.com
-db_port: 3306
+db_port: "3306"
 db_username: admin
 db_database: dev_movie_db
 jwt_expiration: 1d
