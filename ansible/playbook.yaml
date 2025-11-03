@@ -183,7 +183,7 @@
     - name: Wait for application container to be ready
       wait_for:
         timeout: 30
-      delegate_to: localhost
+      become: false
 
     # Deploy Nginx Proxy
     - name: Get current Nginx container status
@@ -230,7 +230,7 @@
     - name: Wait for Nginx to be ready
       wait_for:
         timeout: 10
-      delegate_to: localhost
+      become: false
 
     # Verification
     - name: Verify application is responding through Nginx
