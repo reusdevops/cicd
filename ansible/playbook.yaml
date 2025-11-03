@@ -235,7 +235,7 @@
     # Verification
     - name: Verify application is responding through Nginx
       uri:
-        url: "http://localhost:{{ nginx_proxy_port }}/health"
+        url: "http://localhost:{{ nginx_proxy_port }}/"
         status_code: 200
         timeout: 5
       register: app_response
